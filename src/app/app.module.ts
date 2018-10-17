@@ -11,7 +11,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 Pro.init('7caab809', {
-  appVersion: '1.0.0'
+  appVersion: '0.0.1'
 })
 
 @Injectable()
