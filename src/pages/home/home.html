@@ -1,14 +1,28 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary" text-center>
     <ion-title>
-      Ionic Blank
+      <img style="margin:8px auto; width:90%;" src="../../assets/imgs/knoxweblogoheader.png">
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <!-- <div>
+    <ion-input style="background-color:lightgray" type="text" [(ngModel)]="encodText"></ion-input>
+    <button ion-button block (click)="encode()">Encode</button>
+  </div>
+-->
+
+  <div>
+    <h1 text-center>Knoxweb QR Code scanner</h1>
+    <p text-center>Click the SCAN button to open the scanner camera.</p>
+    <button ion-button block (click)="scan()" color="primary" style="height:160px;width: 80%; font-size: 40px;font-weight:bold; margin:20% 9% auto;">SCAN</button>
+  </div>
+  <div *ngIf="scannedData.text">
+    <!--
+    <br>
+    <span>{{ scannedData.text }}</span>
+  -->
+  <button color="custom" ion-button block (click)="openURL(scannedData.text)" style="height:160px;width: 80%; font-size: 40px;font-weight:bold; margin:5% 9% auto;">CONTINUE</button>
+</div>
 </ion-content>
